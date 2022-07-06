@@ -1,0 +1,52 @@
+# Docker Commands for Basic Operations
+
+# To display docker version available in the machine
+docker --version
+
+# To pull image from DockerHub
+docker pull <image-name>
+
+# To run display available images
+docker images
+
+# To create containers from images
+docker run -dit <image-name>
+
+# To display running containers (This command will not return containers which are in stopped state)
+docker ps
+
+# To display all the container (running/stopped)
+docker ps -a
+
+# To use/work in a container or to execute container
+docker exec -it <container-id> bash
+
+# Portmapping a container and exposing it to the world
+docker run -dit -p <host-port>:<container-port> <image-name>
+
+# To stop a container
+docker stop <container-id>
+
+# To kill a container (Killing the container refers to forcefully shutting down the container)
+docker kill <container-id> 
+
+# To remove/delete a container (Please make sure the container is in stopped condition while running the following command)
+docker rm <container-id>
+
+# To remove/delete a container while it is in running state
+docker rm -f <container-id>
+
+# To remove/delete a docker image (Please make sure there are no associated containers to the image)
+docker rmi <image-name>
+
+# To login to dockerhub from terminal to push images
+docker login
+
+# To push images
+docker push <dockerhub-username>/<image-name-with-tag>
+
+# To save a custom container as image
+docker commit <container-id> <desired-image-name>
+
+# To build a docker image using docker file
+docker build <path-to-the-dockerfile> -t <desired-image-name>
