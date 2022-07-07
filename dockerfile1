@@ -1,0 +1,9 @@
+// Rename the file to dockerfile before you build
+// Dockerfile to create a custom image with apache2 server installed in ubuntu
+// Command to build > "docker build /path-for-directory -t <image-name>"
+
+FROM ubuntu 
+RUN apt-get update 
+RUN apt-get install apache2 -y 
+ADD . ./var/www/html/ 
+ENTRYPOINT apachectl -D FOREGROUND
