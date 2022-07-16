@@ -50,3 +50,48 @@ docker commit <container-id> <desired-image-name>
 
 # To build a docker image using docker file
 docker build <path-to-the-dockerfile> -t <desired-image-name>
+
+# To create a Docker volume
+docker volume create <volume-name>
+
+# To mount a Docker volume with the container
+docker run -dit --name container-name --mount source=<volume-name>,destination=<path-where-you-would-like-to-store> -p host-port:container-port image-name
+
+# To create bind mounts
+docker run -dit --name container-name -v source-path:destination-path -p host-port:container-port image-name
+
+# To link containers
+docker run -dit --name <new-container-name> --link <desired-container-to-be-linked> image-name
+
+# To execute a Docker Compose file
+docker-compose up -d
+
+# To bring down/delete all containers created using docker compose 
+docker-compose down
+
+# To initialise Docker Swarm cluster
+
+--> Since docker swarm cluster follows Master-Slave architecture, we need atleast 2 machines (Master, Slave)
+
+> Execute the following command in Master machine
+docker swarm init --advertise-addr=<master-node-ip>
+
+> Copy the output of the command and paste it in the Slave node
+
+# To display the nodes in the swarm cluster
+docker node ls
+
+# To create a service in docker swarm
+docker service create --name service-name --replicas <number-of-replicas> -p host-port:container-port image-name
+
+# To list all services
+docker service ls
+
+# To remove a service
+docker service rm
+
+# To create a network
+docker network create --driver <network-type> nework-name
+
+# To bind a service to a network
+docker service create --name service-name --replicas <number-of-replicas> --network network-name -p host-port:container-port image-name
