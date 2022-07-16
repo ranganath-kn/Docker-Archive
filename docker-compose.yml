@@ -1,0 +1,13 @@
+# Basic Syntax for Docker Compose file
+
+version: '3'
+services:
+  service-name1:
+    image: ubuntu
+    ports: 
+      - "82:80"
+
+  service-name2:
+    image: nginx
+    ports:
+      - "81:80"
