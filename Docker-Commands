@@ -12,6 +12,9 @@ docker images
 # To create containers from images
 docker run -dit <image-name>
 
+# To create containers from images with name
+docker run -dit --name container-name <image-name>
+
 # To display running containers (This command will not return containers which are in stopped state)
 docker ps
 
