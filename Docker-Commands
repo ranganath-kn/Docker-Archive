@@ -60,6 +60,15 @@ docker volume create <volume-name>
 # To list all docker volumes
 docker volume ls
 
+# To check volume details
+docker inspect <volume-name>
+
+# To remove volume 
+docker volume rm <volume-name>
+
+# To remove all the volumes
+docker volume prune
+
 # To mount a Docker volume with the container
 docker run -dit --name container-name --mount source=<volume-name>,destination=<path-where-you-would-like-to-store> -p host-port:container-port image-name
 
