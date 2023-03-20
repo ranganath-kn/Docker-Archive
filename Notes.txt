@@ -11,3 +11,9 @@ Docker stop, start, kill - Operations of container
 Docker commit - Save changes of container to create a custom image
 Docker build - To create a custom image using docker file 
 Docker push - To push the image to registry
+
+TYPES OF DOCKER STORAGE
+
+Volume
+Bind Mounts
+Tmpfs MountsNpipe Mount
