@@ -57,6 +57,9 @@ docker build <path-to-the-dockerfile> -t <desired-image-name>
 # To create a Docker volume
 docker volume create <volume-name>
 
+# To list all docker volumes
+docker volume ls
+
 # To mount a Docker volume with the container
 docker run -dit --name container-name --mount source=<volume-name>,destination=<path-where-you-would-like-to-store> -p host-port:container-port image-name
 
