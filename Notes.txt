@@ -1,3 +1,13 @@
 - To delete an image, corresponding containers needs to be stopped. Or else, image will only be untagged
 - To remove the container it should be in stopped state or needs to go through force remove
 - To remove all containers in machine use docker rm -f $(docker ps -a -q)
+
+PHASES IN DOCKER LIFECYCLE
+
+Docker pull - Pulls image from registry
+Docker run - Creates container from image
+Docker exec - Navigates into the container to work with it
+Docker stop, start, kill - Operations of container
+Docker commit - Save changes of container to create a custom image
+Docker build - To create a custom image using docker file 
+Docker push - To push the image to registry
