@@ -1,2 +1,3 @@
 - To delete an image, corresponding containers needs to be stopped. Or else, image will only be untagged
 - To remove the container it should be in stopped state or needs to go through force remove
+- To remove all containers in machine use docker rm -f $(docker ps -a -q)
