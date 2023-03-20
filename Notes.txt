@@ -18,3 +18,7 @@ Volume - Can be accessed by only docker process. Easier than Bind mount for stor
 Bind Mounts - Can be accessed by docker and host process. Limited functionality compared to volumes
 Tmpfs Mounts - Cannot be shared bw containers. Only available on linux. Can be used when container generates nonpersistant data
 Npipe Mount - Named pipes are used for connecting container and host and is only for windows
+
+Volumes
+
+- If there are no volumes created or doesnt exist with the name, it would create a new volume based on source arg in docker run cmd
