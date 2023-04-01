@@ -82,6 +82,12 @@ on remote machine enable password authentication
 docker volume create --driver drivername -o -sshcmd=username@ip:pathforstorageinhost -o password=password volumename
 docker run -dit --name containername --mount source=volname,target=targetpath imagename
 
+# To backup from volumes
+docker run --rm -volumes-from sourcecomtainer -v $(pwd):/backup imagename tar cvf /backup/backup.tar /app
+
+# To create volumes from backup
+docker run --rm -volumes-from
+
 # To create bind mounts
 docker run -dit --name container-name -v source-path:destination-path -p host-port:container-port image-name
 
