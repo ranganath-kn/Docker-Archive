@@ -22,3 +22,8 @@ Npipe Mount - Named pipes are used for connecting container and host and is only
 Volumes
 
 - If there are no volumes created or doesnt exist with the name, it would create a new volume based on source arg in docker run cmd
+
+
+DOCKER COMPOSE
+
+- docker compose is used to created multiple containers in one go
